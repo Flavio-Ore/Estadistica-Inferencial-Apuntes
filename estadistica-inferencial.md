@@ -121,13 +121,6 @@ Herramienta de la investigación científica, cuya función básica es **determi
 - Aleatorio estratificado
 - Aleatorio por conglomerados
 
-### 3.2. No Probabilístico
-
-- Por conveniencia o intencional
-- Por cuota
-- Bola de nieve
-- Discrecional
-
 #### 3.1.1. Muestreo Aleatorio Simple
 
 Todos los elementos de la población tienen la misma probabilidad de ser elegidos, es conocida y equitativa.
@@ -157,6 +150,13 @@ Técnica que aprovecha la existencia de grupos o conglomerados naturales en la p
 - Los conglomerados son homogéneos en su interior y diferentes entre sí en propiedades y tamaño
 - Se seleccionan los conglomerados y luego se seleccionan los elementos de cada conglomerado
 - Se usa cuando la población es muy grande y dispersa
+
+### 3.2. No Probabilístico
+
+- Por conveniencia o intencional
+- Por cuota
+- Bola de nieve
+- Discrecional
 
 #### 3.2.1 Muestreo por conveniencia
 
@@ -209,7 +209,8 @@ $P(Z \le -2,53)$
 
 - Buscar en la tabla el valor de -2,5 en la columna de la izquierda y 0,03 en la fila superior
 - El valor de la tabla es 0,0057
-- P(Z &le; -2,53) = 0,0057
+
+$$ P(Z \le -2,53) = 0,0057 $$
 
 #### Problema b)
 
@@ -222,6 +223,10 @@ $$ 1 - P(Z \le 1,32) $$
 
 - Buscar en la tabla el valor de 1,3 en la columna de la izquierda y 0,02 en la fila superior
 - El valor de la tabla es 0,4032
+- Luego se resta a 1
+- El resultado es 0,5968
+
+$$ P(Z \ge 1,32) = 0,5968 $$
 
 #### Problema c)
 
@@ -241,7 +246,7 @@ $$ P(Z \le 3,01) - P(Z \le -2,53) $$
 $$ 0,4987 - 0,0057 $$
 $$ 0,4930 $$
 
-#### Ejercicio P(X < 6)
+#### Ejercicio $P(X < 6)$
 
 ##### Calcule la probabilidad de que X sea menor que 6
 
