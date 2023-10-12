@@ -10,6 +10,10 @@ $$ P(A^c) = 1 - P(A) $$
 
 Esta probabilidad se usa cuando se quiere calcular la probabilidad de que un evento no ocurra. Se calcula restando la probabilidad de que ocurra el evento a 1.
 
+### Teorema del Límite Central
+
+El teorema del límite central establece que, si se toman todas las muestras posibles de un tamaño $n$ de una población, la distribución de las medias muestrales será una distribución normal con una media igual a la media poblacional y una desviación estándar igual a la desviación estándar poblacional dividida por la raíz cuadrada del tamaño de la muestra.
+
 ## 1. Conceptos Básicos
 
 ### 1.1. Definición
@@ -338,7 +342,109 @@ $$ n = \frac{Z\alpha^2 \cdot \sigma^2}{E^2} $$
 
 **Distribución**: Conjunto de datos la manera en la que están presentados varían
 
-# FALTA POR HACER
+```mermaid
+flowchart RL
+
+subgraph Población["Población y &mu;"]
+    población["
+        🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️
+    "]
+end
+
+subgraph muestran[Promedio muestral n]
+    n_n("🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️...")
+end
+
+subgraph muestra1[Promedio muestral 1]
+    n1("🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️")
+end
+
+subgraph muestra2[Promedio muestral 2]
+    n2("🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️")
+end
+
+subgraph muestra3[Promedio muestral 3]
+    n3("🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️")
+end
+
+subgraph distribucion[Distribución de probabilidad de cualquier prpiedad de estas medias de la muestra]
+    promedio1["Promedio Muestral 1"]
+    promedio2["Promedio Muestral 2"]
+    promedio3["Promedio Muestral 3"]
+    promedion["Promedio Muestral n"]
+end
+
+Población --> n1
+Población --> n2
+Población --> n_n
+Población --> n3
+
+promedio1 -- estima --> Población
+promedio2 -- estima --> Población
+promedio3 -- estima --> Población
+promedion -- estima --> Población
+
+promedio1 <---  n1
+promedio2 <---  n2
+promedio3 <---  n3
+promedion <---  n_n
+```
+
+Véase también [Relación población-muestra](#relación-población-muestra)
+
+**e.g.** Tenemos a la población de 2500 empleados y varias de muestras cada una de 30.
+
+### Población
+
+#### $N = 2500$
+
+| Empleado | Salario |
+| -------- | ------- |
+| 1        | $       |
+| 2        | $       |
+| 3        | $       |
+| ...      | ...     |
+| 2500     | $       |
+
+$\mu = \$1200$
+
+#### $n_{1} = 30$
+
+| Empleado | Salario |
+| -------- | ------- |
+| 1        | $       |
+| 2        | $       |
+| 3        | $       |
+| ...      | ...     |
+| 30       | $       |
+
+$\tilde{x}_{1} = \$13334$
+
+#### $n_{2} = 30$
+
+| Empleado | Salario |
+| -------- | ------- |
+| 1        | $       |
+| 2        | $       |
+| 3        | $       |
+| ...      | ...     |
+| 30       | $       |
+
+$\tilde{x}_{2} = \$11484$
+
+#### $n_{k} = 30$
+
+| Empleado | Salario |
+| -------- | ------- |
+| 1        | $       |
+| 2        | $       |
+| 3        | $       |
+| ...      | ...     |
+| 30       | $       |
+
+$\tilde{x}_{k} = \$12500$
+
+Donde $k = 500$
 
 ### Distribución muestral de $\tilde{x}$
 
@@ -352,7 +458,25 @@ Para el muestreo aleatorio simple. Donde E es el valor esperado E($\tilde{x}$) =
 
 #### Población finita
 
-$$ \sigma_{\tilde{x}} = $$
+$$ \sigma\_{\tilde{x}} = \sqrt{\frac{N - n}{N - 1}} \cdot \frac{\sigma^2}{n} $$
+
+#### Población infinita
+
+$$ \sigma\_{\tilde{x}} = \frac{\sigma}{\sqrt{n}} $$
+
+### Si la población finita pero $\frac{N - n}{N} \le 0,05$ se usa la fómula de la [Población infinita](#población-infinita)
+
+**e.g.** Sabemos que $\sigma = \$1,500$, entonces $\sigma_{\tilde{x}} = \$1,500$
+
+$\sigma = 4480.42$
+
+$N = 2500$
+
+$n = 30$
+
+$\frac{n}{N} = 30/2500 = 0,012$
+
+$$ \sigma\_{\tilde{x}} = \frac{4480.42}{\sqrt{30}} = 818.01 $$
 
 ### c) Forma de la distribución (población &cong; p)
 
@@ -366,17 +490,40 @@ $$ n \ge 30 $$
 
 Ls distribución muestral de $\tilde{x}$ es normal para cualquier tamaño de la muestra.
 
-
-### 
-
 ![Tabla Normal](https://bookdown.org/aquintela/EBE/Figure/inter-confi.png)
+
+### Si $n \ge 30$, entonces $\tilde{x}$ se distribuye normalmente
+
+### Si $n < 30$, entonces $\tilde{x}$ se distribuye normalmente _si la población es normal_
+
+### Si es un [M.A.S](#311-muestreo-aleatorio-simple) de $n \ge 30$ y aplicando el [Teorema del Límite Central](#teorema-del-límite-central), la distribución muestral de $\tilde{x}$ es normal con $\mu_{\tilde{x}} = \mu$ y $\sigma_{\tilde{x}} = \frac{\sigma}{\sqrt{n}}$
+
+### La media $(\mu_{\tilde{x}})$ y la desviación estándar $(\sigma_{\tilde{x}})$ de la distribución muestral de $\tilde{x}$ son
+
+$$ \mu*{\tilde{x}} = \mu $$
+$$ \sigma*{\tilde{x}} = \frac{\sigma}{\sqrt{n}} $$
+
+## 7. Prueba de normalidad
+
+Para conseguir si la distribución de datos se ajusta a una distribución normal teórica.
+
+### 7.1. Prueba de Kolmogorov-Smirnov
+
+1. $H_{0}$: Los datos siguen una [D.N.E](#6-distribución-muestral)
+2. $H_{1}$: Los datos **NO** siguen una [D.N.E](#6-distribución-muestral)
+
+#### Errores conocidos (véase [Nivel de confianza](#se-elige-nivel-de-confianza))
+
+$$ \alpha = \{0,01; 0,05; 0,1\}$$
+
+#### Estadístico de Prueba
 
 ## Formulario
 
-| Fórmula         | Notación                                          | Descripción                |
-| --------------- | ------------------------------------------------- | -------------------------- |
-| Estandarización | [$Z = \frac{X - \mu}{\sigma}$][f_estandarización] | Proceso de estandarización |
-| Cálculo tamaño de muestra | [Z&alpha;][f_calculo_de_muestra] | Nivel de confianza, margen de error y proporción estimada |
+| Fórmula                   | Notación                                | Descripción                                               |
+| ------------------------- | --------------------------------------- | --------------------------------------------------------- |
+| Estandarización           | [Z - &mu; - &sigma;][f_estandarización] | Proceso de estandarización                                |
+| Cálculo tamaño de muestra | [Z&alpha;][f_calculo_de_muestra]        | Nivel de confianza, margen de error y proporción estimada |
 
 > [MARKDOWN BASIC SYNTAX GUIDE](https://www.markdownguide.org/basic-syntax/)
 
