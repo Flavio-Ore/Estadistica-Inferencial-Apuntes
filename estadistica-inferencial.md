@@ -57,21 +57,21 @@ Objeto indivisible que será estudiado sobre una población.
 ```mermaid
 flowchart LR
     subgraph Población
-    población("`
+    población("
         &mu;
         &sigma;²
         &pi;
         Parámetros
-    `")
+    ")
     end
 
     subgraph Muestra
-    muestra("`
+    muestra("
         $\tilde{x}$
         S²
         &rho;
         Estadísticos
-    `")
+    ")
     end
 
     Población  -->  Estiman  -->  Muestra  -->  Población
@@ -193,11 +193,11 @@ A criterio del investigador los elementos son elegidos sobre lo que él cree que
 ```mermaid
 flowchart LR
     subgraph Normal
-        var("`
+        var("
             &mu; = 0;
             &sigma; = 1;
             S = 1;
-        `")
+        ")
     end
 
 Normal ==> Estándar
@@ -278,20 +278,20 @@ Probabilidad deseada de que el parámetro a estimar se encuentre dentro de un ma
 
 ```mermaid
 flowchart LR
-    subgraph NC["`Nivel de confianza`"]
-        alpha("`
+    subgraph NC["Nivel de confianza"]
+        alpha("
             0,90 = 90%
             0,95 = 95%
             0,98 = 98%
-        `")
+        ")
     end
 
-    subgraph Za["`Z&alpha;`"]
-        z("`
+    subgraph Za["Z&alpha;"]
+        z("
             1,64
             1,96
             2,33
-        `")
+        ")
     end
 
     NC --> Za
@@ -341,7 +341,30 @@ $$ n = \frac{Z\alpha^2 \cdot \sigma^2}{E^2} $$
 
 Para el muestreo aleatorio simple. Donde E es el valor esperado E($\tilde{x}$) = &mu;
 
-**e.g.** Sabemos que &mu; = $12,2111, entonces E($\tilde{x}$) = 12,2111
+**e.g.** Sabemos que &mu; = \$12,2111, entonces E($\tilde{x}$) = \$12,2111
+
+### b) Desviación Estándar
+
+#### Población finita
+
+$$ \sigma_{\tilde{x}} = $$
+
+### c) Forma de la distribución (población &cong; p)
+
+#### Población desconocida
+
+La distribución de la media de la muestra $\tilde{x}$ se puede aproximar con una distribución normal de probabilidades cuando el tamao de la muestra es grande
+
+$$ n \ge 30 $$
+
+#### Población normal
+
+Ls distribución muestral de $\tilde{x}$ es normal para cualquier tamaño de la muestra.
+
+
+### 
+
+![Tabla Normal](https://bookdown.org/aquintela/EBE/Figure/inter-confi.png)
 
 ## Formulario
 
@@ -351,6 +374,8 @@ Para el muestreo aleatorio simple. Donde E es el valor esperado E($\tilde{x}$) =
 | Cálculo tamaño de muestra | [Z&alpha;][f_calculo_de_muestra] | Nivel de confianza, margen de error y proporción estimada |
 
 > [MARKDOWN BASIC SYNTAX GUIDE](https://www.markdownguide.org/basic-syntax/)
+
+> [FÓRMULAS ESTADÍSTICAS](https://www.estadistica.net/Algoritmos2/pau.html)
 
 [f_estandarización]: #fórmula-de-proceso-de-estandarización-🔋
 [f_calculo_de_muestra]: #5-cálculo-de-tamaño-de-muestra-🔋
