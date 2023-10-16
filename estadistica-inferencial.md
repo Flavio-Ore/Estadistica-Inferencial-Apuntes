@@ -688,6 +688,9 @@ $$ D_{1}+ = 0,1-0,051 = 0,049 $$
 
 $$ D_{1}- = 0,051 - 0 = 0,051 $$
 
+- El resultado del máximo valor en **valor absoluto** de la tabla, entre la fila de los D+ y D- es respectivamente |-0.116| y |0,216|.
+- Usando valor absoluto, se obtiene que el valor máximo es 0,216
+
 $$ D = \max \{D^+, D^-\} = \max \{0,049, 0,051\} = 0,216 $$
 
 - Véase [Criterio para rechazar o aceptar la prueba de hipótesis](#73-por-tanto-el-criterio-para-rechazar-o-aceptar-la-prueba-de-hipótesis-es)
@@ -696,7 +699,11 @@ $$ D_{a} = \frac{0,895}{\sqrt{10}-0,01+\frac{0,85}{\sqrt{10}}} = \frac{0,895}{3,
 
 **Conclusión:**
 
-Como $D < D\alpha$, se puede concluir que los sueldos de los ingenieros de la UTP se ajustan a una [distribución Normal](#41-tabla-distribución-normal-tabla-z)
+Como $D < D\alpha$, se puede concluir que los sueldos de los ingenieros de la UTP se ajustan a una [distribución Normal](#41-tabla-distribución-normal-tabla-z).
+
+Es decir que aceptamos la hipótesis nula [$H_{0}$](#73-por-tanto-el-criterio-para-rechazar-o-aceptar-la-prueba-de-hipótesis-es), es decir que tiene una [distribución normal](#41-tabla-distribución-normal-tabla-z)
+
+## Resumen [Distribución Muestral](#6-distribución-muestral) y [Prueba de Normalidad](#7-prueba-de-normalidad)
 
 ## Formulario
 
