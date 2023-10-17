@@ -94,21 +94,21 @@ Objeto indivisible que será estudiado sobre una población.
 ```mermaid
 flowchart LR
     subgraph Población
-    población("`
+    población("
         &mu;
         &sigma;²
         &pi;
         Parámetros
-    `")
+    ")
     end
 
     subgraph Muestra
-    muestra("`
+    muestra("
         $\tilde{x}$
         S²
         &rho;
         Estadísticos
-    `")
+    ")
     end
 
     Población  -->  Estiman  -->  Muestra  -->  Población
@@ -370,6 +370,8 @@ $$ n = \frac{Z\alpha^2 \cdot \sigma^2}{E^2} $$
 
 **Distribución**: Conjunto de datos la manera en la que están presentados varían según la distribución.
 
+**[Distribución normal](#6-distribución-muestral)**: Datos de varias muestras de una población, mientras MÁS MUESTRAS, MÁS SEGURO QUE SERÁ DISTRIBUCIÓN NORMAL, confirmando la campana de Gauss.
+
 SI ESTUDIO LA MEDIA (&mu;) DE LA POBLACIÓN: [PARÁMETRO](#14-parámetro)
 
 SI ESTUDIO LA MEDIA ($\tilde{x}$)DE LA MUESTRA: [ESTADÍSTICO o ESTIMADOR](#15-estadístico)
@@ -386,12 +388,12 @@ flowchart RL
 
 subgraph Población["Población (N) y &mu;"]
     población["
-        🙍‍♂️🙍‍♂️🙍‍♂️🙍‍♂️
+        🙍‍♂️🙍‍♂️...🙍‍♂️
     "]
 end
 
 subgraph muestran["Muestra n"]
-    n_k("🙍‍♂️🙍‍♂️")
+    n_k("🙍‍♂️..🙍‍♂️")
 end
 
 subgraph distribucion["Distriución Muestral"]
@@ -479,23 +481,33 @@ $$ \tilde{x}_{k} = \$12500$$
 
 $$ \frac{\sum\tilde{x}_{i}}{500} \approx \mu  $$
 
-### Si en vez de 500 muestras tomamos todas las muestras posibles, obtendríamos
+### Si en vez de 500 muestras tomamos todas las muestras posibles
+
+**Obtendríamos:** Valor estimado = media poblacional
 
 $$ E(\tilde{x}) = \mu  $$
 
-### Propiedades de la distribución muestral de $\tilde{x}$
+### Propiedades de la distribución muestral de la media muestral
 
-Donde la media y la desviación estándar:
+$$ \tilde{x} $$
 
-#### La media (&mu;) y la [desviación típica](#desviación-estándar) (&sigma;) de la **población**
+**Donde la media y la desviación estándar:**
 
-#### La media (&mu;$_{\tilde{x}}$) y la [desviación típica](#desviación-estándar) (&sigma;$_{\tilde{x}}$) de la **distribución muestral**
+La media (&mu;) y la [desviación típica](#desviación-estándar) (&sigma;) de la **población**.
+
+La media (&mu;$_{\tilde{x}}$) y la [desviación típica](#desviación-estándar) (&sigma;$_{\tilde{x}}$) de la distribución **muestral**.
 
 Casos según la distribución de la población: Donde $X$ son los datos.
 
-### 6.1. Distribución Estándar de la Muestra X &sim; n(&mu;, $\frac{\sigma}{\sqrt{n}}$) y Población X &sim; N(&mu;, &sigma;²)
+### 6.1. Distribución Estándar de la Muestra (n) y Población (N)
 
-#### Caso 1: Población con Distribución **[NORMAL](#curva-normal)**: $X \sim N(\mu, \sigma^2)$
+Muestra: $X \sim  n(\mu, \frac{\sigma}{\sqrt{n}})$
+
+Población: $X \sim N(\mu, \sigma²)$
+
+#### Caso 1: Población con Distribución **[NORMAL](#curva-normal)**
+
+$X \sim N(\mu, \sigma^2)$
 
 Si la muestra aleatoria $X_{1}, ..., X_{n}$ Tiene distribución normal con **media &mu;** y **desviación típica &sigma;**:
 
@@ -503,9 +515,11 @@ Para cualquier tamaño de muestra ($n$):
 
 La media muestral ($\tilde{x}$) también tiene una distribución normal con media $\mu_{\tilde{x}} = \mu$ y [desviación típica](#desviación-estándar): $\sigma_{\tilde{x}} = \frac{\sigma}{\sqrt{n}}$
 
-**Notación estadística** -> Si: $X \sim n(\mu, \frac{\sigma}{\sqrt{n}}) \rarr X \sim N(\mu, \frac{\sigma}{\sqrt{n}})$
+**Notación estadística** &rightarrow; Si: $X \sim n(\mu, \frac{\sigma}{\sqrt{n}}) \rightarrow X \sim N(\mu, \frac{\sigma}{\sqrt{n}})$
 
-#### Caso 2: Población con distribución **NO NORMAL**: $X \sim ??(\mu, \sigma^2)$
+#### Caso 2: Población con distribución **NO NORMAL**
+
+$X \sim ??(\mu, \sigma^2)$
 
 **Teorema del [límite central](#teorema-de-límite-central)**
 
@@ -531,7 +545,9 @@ Si no dan datos de la población, entonces se asume que es infinita.
 
 $$ \sigma_{\tilde{x}} = \frac{\sigma}{\sqrt{n}} $$
 
-### Si la población finita pero $\frac{n}{N} \le 0,05$ se usa la fómula de la [Población infinita](#población-infinita)
+### Si la población es finita pero la división entre la muestra y la población es menor o igual a 0,05; se usa la fómula de la [Población infinita](#población-infinita)
+
+$$ \frac{n}{N} \le 0,05 $$
 
 **e.g.** Sabemos que $\sigma = \$1,500$, entonces $\sigma_{\tilde{x}} = \$1,500$
 
@@ -541,7 +557,7 @@ $n = 30$
 
 $$ \frac{n}{N} = 30/2500 = 0,012 $$
 
-$$ \sigma\_{\tilde{x}} = \frac{4480.42}{\sqrt{30}} = 818.01 $$
+$$ \sigma_{\tilde{x}} = \frac{4480.42}{\sqrt{30}} = 818.01 $$
 
 ### c) Forma de la distribución (población &equiv; p)
 
@@ -557,11 +573,17 @@ Ls distribución muestral de $\tilde{x}$ es **[NORMAL](#curva-normal)** para cua
 
 ![Tabla Normal](https://bookdown.org/aquintela/EBE/Figure/inter-confi.png)
 
-### Si $n \ge 30$, entonces $\tilde{x}$ se distribuye normalmente
+### Si la muestra n &ge; 30
 
-### Si $n < 30$, entonces $\tilde{x}$ se distribuye normalmente _si la población es normal_
+Si $n \ge 30$, entonces $\tilde{x}$ se distribuye normalmente.
 
-### Con una [M.A.S](#311-muestreo-aleatorio-simple) de $n \ge 30$ y aplicando el [Teorema del Límite Central](#teorema-de-límite-central), la distribución muestral de $\tilde{x}$ es normal con &mu; y &sigma;$_{\tilde{x}} = \frac{\sigma}{\sqrt{n}}$
+### Si muestra n < 30
+
+Si $n < 30$, entonces $\tilde{x}$ se distribuye normalmente _si la población es normal_
+
+### Con una [M.A.S](#311-muestreo-aleatorio-simple) de [muestra mayor o igual a 30](#si-la-muestra-es-mayor-o-igual-a-30)
+
+Y aplicando el [Teorema del Límite Central](#teorema-de-límite-central), la distribución muestral de $\tilde{x}$ es normal con &mu; y &sigma;$_{\tilde{x}} = \frac{\sigma}{\sqrt{n}}$
 
 Véase el ejemplo en [Teorema del Límite Central](#teorema-de-límite-central)
 
@@ -613,11 +635,13 @@ Así pues $D$ es la mayor diferencia absoluta entre la frecuencia acumulada obse
 
 Para efectos prácticos:
 
-$$ D^{+} = \max_{1 \le i \le n}\{ \frac{i}{n} - F_{0}(x_{i}) \},  D^{-} = \max_{1 \le i \le n}\{ F_{0}(x_{i}) - \frac{i - 1}{n} \}$$
+$$ D^{+} = \max_{1 \le i \le n}\{ \frac{i}{n} - F_{0}(x_{i}) \}$$
+
+$$D^{-} = \max_{1 \le i \le n}\{ F_{0}(x_{i}) - \frac{i - 1}{n} \}$$
 
 Por tanto, a partir de estos valores $D = \max \{D^+, D^-\}$
 
-### 7.3. Por tanto el criterio para rechazar o aceptar la prueba de hipótesis es
+### 7.3. Por tanto el criterio para rechazar o aceptar la prueba de hipótesis es la siguiente
 
 Si $D \le D_{\alpha} \rArr Aceptar H_{0}$
 
@@ -639,7 +663,7 @@ Normal:
 
 $$ K(n) = \sqrt{n} - 0,01 + \frac{0,85}{\sqrt{n}}$$
 
-### Ejemplo N.1
+### 7.x Ejemplo N.1
 
 Se tienen los ingresos de un grupo de 10 ingenieros egresado de la UTP, los cuales se presentan a continucación (en miles):
 
@@ -684,11 +708,11 @@ $$ Z = \frac{Y_{1}-x}{D} = \frac{1,9 - 4,1}{1,34} = -1,628 $$
 
 $$ Fo = P(Z =- 1,628) = 0,051 $$
 
-$$ D_{1}+ = 0,1-0,051 = 0,049 $$
+$$ D_{1}^+ = 0,1-0,051 = 0,049 $$
 
-$$ D_{1}- = 0,051 - 0 = 0,051 $$
+$$ D_{1}^- = 0,051 - 0 = 0,051 $$
 
-- El resultado del máximo valor en **valor absoluto** de la tabla, entre la fila de los D+ y D- es respectivamente |-0.116| y |0,216|.
+- El resultado del máximo valor en **valor absoluto** de la tabla, entre la fila de los D+ y D- es respectivamente |-0.116| y |0,216|. ❗
 - Usando valor absoluto, se obtiene que el valor máximo es 0,216
 
 $$ D = \max \{D^+, D^-\} = \max \{0,049, 0,051\} = 0,216 $$
@@ -705,6 +729,16 @@ Es decir que aceptamos la hipótesis nula [$H_{0}$](#73-por-tanto-el-criterio-pa
 
 ## Resumen [Distribución Muestral](#6-distribución-muestral) y [Prueba de Normalidad](#7-prueba-de-normalidad)
 
+**Distribución muestral de medias con varianza conocida**:
+
+Sabemos que si de una muestra aleatoria ($x_{1}, x_{2}, ..., x_{n}$) de tamaño n, procedente de una población normal N(&mu;, &sigma;²); entonces la distribución de la media muestral tendrá una distribución normal para cualquier tamaño.
+
+Si: **X** $\sim N(\mu, \sigma^2)$ &rightarrow; $\tilde{X} \sim n(\mu; \frac{\sigma}{\sqrt{n}})$
+
+**Si: X** $\sim ??(\mu, \sigma^2)$ **[TLC](#teorema-de-límite-central) si n &le; 30** &rightarrow; $\tilde{X} \sim n(\mu; \frac{\sigma}{\sqrt{n}})$
+
+&rightarrow; **ESTANDARIZACIÓN:** $Z = \frac{\tilde{X}-\mu}{\frac{\sigma}{\sqrt{n}}} \sim N(0,1)$
+
 ## Formulario
 
 | Fórmula                   | Notación                                          | Descripción                                               |
@@ -713,6 +747,9 @@ Es decir que aceptamos la hipótesis nula [$H_{0}$](#73-por-tanto-el-criterio-pa
 | Cálculo tamaño de muestra | [Z&alpha;][f_calculo_de_muestra]                  | Nivel de confianza, margen de error y proporción estimada |
 
 > [MARKDOWN BASIC SYNTAX GUIDE](https://www.markdownguide.org/basic-syntax/)
+> [Mathematics in R Markdown](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html)
+> [How to markdown and document](https://hydro-informatics.com/documentation/documentation.html#markdown-editors-ides)
+> [Extra Mathematics in Markdown](https://learninglab.gitlabpages.inria.fr/mooc-rr/mooc-rr-ressources/module1/ressources/introduction_to_markdown.html)
 
 [f_estandarización]: #fórmula-de-proceso-de-estandarización-🔋
 [f_calculo_de_muestra]: #5-cálculo-de-tamaño-de-muestra-🔋
