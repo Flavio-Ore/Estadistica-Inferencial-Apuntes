@@ -1,12 +1,11 @@
-
 # Prueba de normalidad
 
 Para conseguir si la distribución de datos se ajusta a una distribución normal teórica.
 
 ## 1. Prueba de Kolmogorov-Smirnov
 
-1. $H_{0}$: Los datos siguen una [D.N.E](./estadistica-inferencial.md/#caso-1-población-con-distribución-normal)
-2. $H_{1}$: Los datos [**NO** siguen una D.N.E](/lista-definiciones.md/#41-tabla-distribución-normal-tabla-z), no tienen [curva normal](/lista-definiciones.md/#curva-normal)
+1. $H_{0}$: Los datos siguen una [D.N.E](/lista-definiciones.md/#41-tabla-distribución-normal-estandarizada-tabla-z)
+2. $H_{1}$: Los datos [**NO** siguen una D.N.E](/lista-definiciones.md/#fórmula-de-proceso-de-estandarización-🔋), no tienen [curva normal](/lista-definiciones.md/#curva-normal)
 
 ## 2. Errores conocidos
 
@@ -14,9 +13,9 @@ $$ \alpha = \{0,01; 0,05; 0,1\}$$
 
 ## 3. Estadístico de Prueba
 
-Arsenal matemático para determinar si los datos tienen [curva normal](#curva-normal) o **NO**.
+Arsenal matemático para determinar si los datos tienen [curva normal](/lista-definiciones.md/#curva-normal) o **NO**.
 
-$$ D = \displaystyle \sup_{1 \le i \le n}|\hat{F}_{n}(x_{i}) - F_{0}(x_{i})| $$
+$$ D = \displaystyle \sup_{1 \le i \le n}|\hat{F}_{n}(x_{i}) - F_0(x_{i})| $$
 
 Donde:
 
@@ -66,8 +65,8 @@ Probar que los sueldos se ajustan a una distribución normal con un nivel de sig
 
 **Solución:**
 
-1. $H_{0}$: Los Sueldos siguen una [D.N.E](/distribucion-muestral.md/#caso-1-población-con-distribución-normal)
-2. $H_{1}$: Los Sueldos [**NO** siguen una D.N.E](/distribucion-muestral.md/#caso-2-población-con-distribución-no-normal)
+1. $H_{0}$: Los Sueldos siguen una [D.N.E](/apuntes-estadistica-inferencial/distribucion-muestral.md/#caso-1-población-con-distribución-normal)
+2. $H_{1}$: Los Sueldos [**NO** siguen una D.N.E](/apuntes-estadistica-inferencial/distribucion-muestral.md/#caso-2-población-con-distribución-no-normal)
 
 &alpha; = 0,05
 
@@ -116,18 +115,6 @@ $$ D_{a} = \frac{0,895}{\sqrt{10}-0,01+\frac{0,85}{\sqrt{10}}} = \frac{0,895}{3,
 
 **Conclusión:**
 
-Como $D < D\alpha$, se puede concluir que los sueldos de los ingenieros de la UTP se ajustan a una [distribución Normal](#41-tabla-distribución-normal-tabla-z).
+Como $D < D\alpha$, se puede concluir que los sueldos de los ingenieros de la UTP se ajustan a una [distribución Normal](/apuntes-estadistica-inferencial/lista-definiciones.md/#41-tabla-distribución-normal-estandarizada-tabla-z).
 
-Es decir que aceptamos la hipótesis nula [$H_{0}$](#73-por-tanto-el-criterio-para-rechazar-o-aceptar-la-prueba-de-hipótesis-es), es decir que tiene una [distribución normal](#41-tabla-distribución-normal-tabla-z)
-
-## Resumen [Distribución Muestral](#6-distribución-muestral) y [Prueba de Normalidad](#7-prueba-de-normalidad)
-
-**Distribución muestral de medias con varianza conocida**:
-
-Sabemos que si de una muestra aleatoria ($x_{1}, x_{2}, ..., x_{n}$) de tamaño n, procedente de una población normal N(&mu;, &sigma;²); entonces la distribución de la media muestral tendrá una distribución normal para cualquier tamaño.
-
-Si: **X** $\sim N(\mu, \sigma^2)$ &rightarrow; $\tilde{X} \sim n(\mu; \frac{\sigma}{\sqrt{n}})$
-
-**Si: X** $\sim ??(\mu, \sigma^2)$ **[TLC](#teorema-de-límite-central) si n &le; 30** &rightarrow; $\tilde{X} \sim n(\mu; \frac{\sigma}{\sqrt{n}})$
-
-&rightarrow; **ESTANDARIZACIÓN:** $Z = \frac{\tilde{X}-\mu}{\frac{\sigma}{\sqrt{n}}} \sim N(0,1)$
+Es decir que aceptamos la hipótesis nula [$H_{0}$](#por-tanto-el-criterio-para-rechazar-o-aceptar-la-prueba-de-hipótesis-es-la-siguiente), es decir que tiene una [distribución normal](/apuntes-estadistica-inferencial/lista-definiciones.md/#41-tabla-distribución-normal-estandarizada-tabla-z)

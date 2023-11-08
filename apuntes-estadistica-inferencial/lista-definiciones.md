@@ -4,6 +4,16 @@ Inferir parámetros estadísticos de la población, a partir de los estadístico
 
 ## 0. Lista de definiciones
 
+### Campana de Gauss
+
+Es una curva simétrica, en forma de campana, que se obtiene al graficar una distribución normal.
+
+Es cuando los datos se distribuyen normalmente.
+
+### Valor Nominal
+
+Es el promedio
+
 ### Gráficas
 
 Para cada tipo de variable hay una tabla.
@@ -13,13 +23,13 @@ Para cada tipo de variable hay una tabla.
 
 **e.g. Variables cuantitativas continuas o discretas** usan un diagrama llamado histograma. Que es parecido al de barras pero para datos que están en tabla y están agrupados (intervalos); en el eje de abscisas o $x$ van los intervalos y en la ordenada o $y$ las frecuencias. Al unirse los puntos medios de cada barra, se forma un polígono llamada **polígono de frecuencias**, cuyo área que tenga va a representar a la población o muestra. Es a partir de este polígono, se genera la **campana de Gauss**.
 
-![Polígono de frecuencias que forma una campana de Gauss](/Lista-definiciones/poligono-de-frecuencias.png)
+![Polígono de frecuencias que forma una campana de Gauss](/apuntes-estadistica-inferencial/Lista-definiciones/poligono-de-frecuencias.png)
 
 ### Teorema de límite central
 
 El teorema del límite central establece que, si se toman todas las muestras posibles de tamaño $n$ de una población, la distribución de las medias muestrales será una distribución normal con media igual a la media poblacional y desviación estándar igual a la desviación estándar poblacional dividida por la raíz cuadrada del tamaño de la muestra.
 
-![Teorema del límite central](/Lista-definiciones/teorema-limite-central.jpg)
+![Teorema del límite central](/apuntes-estadistica-inferencial/Lista-definiciones/teorema-limite-central.jpg)
 
 **e.g.** Vamos a ver la estatura de personas menores de 30 años, estatura entre 30-50 y mayores de 50. Al hacer la gráfica los jóvenes tiendes a ir a la **izquierda**, los de 30-50 al **centro** y los mayores de 50 a la **derecha**. Al hacer la gráfica de la media de cada grupo, se ve que se distribuyen normalmente.
 
@@ -58,7 +68,7 @@ $$ \sigma = 1 $$
 
 Es una curva simétrica, en forma de campana, que se obtiene al graficar una distribución normal.
 
-![Distribución Normal](/Distribucion-muestral/distribucion-muestral.jpg)
+![Distribución Normal](/apuntes-estadistica-inferencial/Distribucion-muestral/distribucion-muestral.jpg)
 
 ## 1. Conceptos Básicos
 
@@ -100,7 +110,7 @@ Valores que toma la característica ([variable](#16-variable)) observada en cada
 
 Objeto indivisible que será estudiado sobre una población.
 
-![Población->Muestra->Individuos->Variables](/Lista-definiciones/Muestreos/poblacion-muestra-individuo-variable.png)
+![Población->Muestra->Individuos->Variables](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/poblacion-muestra-individuo-variable.png)
 
 ## Relación Población-Muestra
 
@@ -173,7 +183,7 @@ Herramienta de la investigación científica, cuya función básica es **determi
 - Aleatorio estratificado
 - Aleatorio por conglomerados
 
-![Los cuatro ejemplos de muestreos probabilísticos](/Lista-definiciones/Muestreos/resumen-muestreo-probabilistico.png)
+![Los cuatro ejemplos de muestreos probabilísticos](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/resumen-muestreo-probabilistico.png)
 
 ### 3.2. No Probabilístico
 
@@ -182,7 +192,7 @@ Herramienta de la investigación científica, cuya función básica es **determi
 - Bola de nieve
 - Discrecional
 
-![Muestreo no probabilistico](/Lista-definiciones/Muestreos/muestreo-no-probabilistico.jpg)
+![Muestreo no probabilistico](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/muestreo-no-probabilistico.jpg)
 
 #### 3.1.1. Muestreo Aleatorio Simple
 
@@ -192,7 +202,7 @@ Todos los elementos de la población tienen la misma probabilidad de ser elegido
 - Necesita una lista completa de los elementos de la población (marco muestral)
 - Es obligatorio un marco muestral
 
-![Muestreo Aleatorio Simple a partir de la población](/Lista-definiciones/Muestreos/muestreo-probabilistico.jpg)
+![Muestreo Aleatorio Simple a partir de la población](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/Muestreo-aleatorio-simple-A-partir-de-la-poblacion-blanco-se-seleccionan-al-azar.png)
 
 #### 3.1.2 Muestreo Sistemático
 
@@ -202,7 +212,7 @@ Se aplica cuando la población es bastante irregular respecto al carácter que s
 - En el [MAS](#311-muestreo-aleatorio-simple) primero se calcula primero el tamaño de la muestra y luego se selecciona el intervalo de selección
 - A veces se usa un intervalo
 
-![Muestreo sistemático](/Lista-definiciones/Muestreos/muestreo-sistematico.jpg)
+![Muestreo sistemático](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/muestreo-sistematico.jpg)
 
 #### 3.1.3. Muestreo Estratificado
 
@@ -210,7 +220,7 @@ Se aplica cuando la población es bastante irregular respecto al carácter que s
 - Cada estrato homogéneos en su interior y diferentes entre sí en propiedades y tamaño
 - Los estratos más grandes tienen mayor probabilidad de ser elegidos
 
-![Muestreo estratificado](/Lista-definiciones/muestreo-estratificado.png)
+![Muestreo estratificado](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/muestreo-estratificado.png)
 
 #### 3.1.4. Muestreo por Conglomerados
 
@@ -220,7 +230,7 @@ Técnica que aprovecha la existencia de grupos o conglomerados naturales en la p
 - Se seleccionan los conglomerados y luego se seleccionan los elementos de cada conglomerado
 - Se usa cuando la población es muy grande y dispersa
 
-![Muestreo por conglomerados](/Lista-definiciones/Muestreos/muestreo-conglomerados.jpg)
+![Muestreo por conglomerados](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/muestreo-conglomerados.jpg)
 
 #### 3.2.1 Muestreo por conveniencia
 
@@ -228,7 +238,7 @@ Comúnmente usada. Consiste en seleccionar una muestra de la población por el h
 
 **e.g.** Seleccionar a los primeros 100 estudiantes que lleguen a la universidad
 
-![Muestreo por conveniencia](/Lista-definiciones/Muestreos/muestreo-conveniencia.jpg)
+![Muestreo por conveniencia](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/muestreo-conveniencia.jpg)
 
 #### 3.2.2 Muestreo por cuota
 
@@ -240,13 +250,13 @@ Es la versión **no probabilística** del muestreo estratificado.
 2. Fijar tamaño de las cuotas: Se fijan una "cuotas" que consisten en un número de individuos a encuestas para cada uno de estos grupos.
 3. Seleccionar los individuos y comprobar las cuotas: Se buscan a los individuos (cuotas) de manera **no aleatoria**, puede ser por un muestreo por conveniencia.
 
-![Muestreo por cuotas](/Lista-definiciones/Muestreos/muestreo-cuotas.jpg)
+![Muestreo por cuotas](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/muestreo-cuotas.jpg)
 
 #### 3.2.3 Muestreo por bola de nieve
 
 Se localiza a algunos individuos, los cuales conducen a otros y estos a otros y así sucesivamente. Hasta conseguir que se **sature** la información.
 
-![Muestreo por bola de nieve](/Lista-definiciones/Muestreos/muestreo-bola-de-nieve.png)
+![Muestreo por bola de nieve](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/muestreo-bola-de-nieve.png)
 
 ##### Se emplea para poblaciones ocultas o de difícil acceso
 
@@ -254,7 +264,7 @@ Se localiza a algunos individuos, los cuales conducen a otros y estos a otros y 
 
 A criterio del investigador los elementos son elegidos sobre lo que él cree que puede aportar al estudio o investigación
 
-![Muestreo discrecional](/Lista-definiciones/Muestreos/muestreo-discrecional-o-juicio.png)
+![Muestreo discrecional](/apuntes-estadistica-inferencial/Lista-definiciones/Muestreos/muestreo-discrecional-o-juicio.png)
 
 ## 4. Tablas estadísticas
 
@@ -324,7 +334,7 @@ $\sigma = 1,5$
 
 $$ Z = \frac{X - \mu}{\sigma} $$
 
-### Los valores de Z van de -3,99 a 3,99 ❗
+#### Los valores de Z van de -3,99 a 3,99 ❗
 
 - Aplican las mismas reglas de la tabla de distribución normal
 
@@ -335,3 +345,5 @@ $$ Z = -1,33 $$
 - Buscar en la tabla el valor de -1,3 en la columna de la izquierda y 0,03 en la fila superior
 - El valor de la tabla es 0,0918
   $$ P(Z < 6) = 0,0918 $$
+
+### 4.2. Tabla Distribución T-Student
