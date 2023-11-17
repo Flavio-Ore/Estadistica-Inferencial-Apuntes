@@ -35,7 +35,7 @@ Por tanto, a partir de estos valores $D = \max \{D^+, D^-\}$
 
 ## Por tanto el criterio para rechazar o aceptar la prueba de hipótesis es la siguiente
 
-Si $D \le D_{\alpha} \rArr Aceptar H_{0}$
+Si $D \le D_{\alpha} \rightArrow$ Aceptar $H_{0}$
 
 Si $D > D_{\alpha} \rArr Rechazar H_{0}$
 

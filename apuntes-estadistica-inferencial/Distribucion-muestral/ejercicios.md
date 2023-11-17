@@ -320,11 +320,13 @@ Un equipo de psicólogos está investigando si existen o no diferencias entre do
 **Datos del problema:**
 
 **Población:**
+
 | Método X   | Método Y     |
 | ---------- | ------------ |
 | &mu;1 = 90 | &mu;2 = 87.3 |
 
 **Muestra:**
+
 | Método X  | Método Y  |
 | --------- | --------- |
 | n1 = 10   | n2 = 10   |
@@ -340,7 +342,7 @@ $X_2$: Puntuación de ansiedad del método Y
 
 $$ P(\tilde{X}_1-\tilde{X}_2 > 6)$$
 
-**Correccion de T-Student:** Estandarización
+**Corrección de T-Student:** Estandarización
 
 $$ T=\frac{(\tilde{X}_1-\tilde{X}_2)-(\mu_1-\mu_2)}{\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}}} \sim t_{v} $$
 
