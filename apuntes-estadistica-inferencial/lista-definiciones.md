@@ -4,6 +4,10 @@ Inferir parámetros estadísticos de la población, a partir de los estadístico
 
 ## 0. Lista de definiciones
 
+### Proporción
+
+Es la relación entre el número de elementos que poseen una característica determinada y el número total de elementos de la población.
+
 ### Campana de Gauss
 
 Es una curva simétrica, en forma de campana, que se obtiene al graficar una distribución normal.
@@ -28,6 +32,8 @@ Para cada tipo de variable hay una tabla.
 ### Teorema de límite central
 
 El teorema del límite central establece que, si se toman todas las muestras posibles de tamaño $n$ de una población, la distribución de las medias muestrales será una distribución normal con media igual a la media poblacional y desviación estándar igual a la desviación estándar poblacional dividida por la raíz cuadrada del tamaño de la muestra.
+
+Si tienes datos **menores** a 30, se considera que los datos cumplen una curva normal.
 
 ![Teorema del límite central](/apuntes-estadistica-inferencial/Lista-definiciones/teorema-limite-central.jpg)
 

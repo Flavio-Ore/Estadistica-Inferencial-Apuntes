@@ -143,7 +143,7 @@ $$ gl = n-1 $$
 
 ## Fórmulas para el cálculo del intervalo de confianza (IC)
 
-### Caso 1
+**Caso 1:**
 
 Emplearemos $Z$ cuando: $n \ge 30$ y &sigma;² **CONOCIDA**
 
@@ -151,7 +151,7 @@ $$ IC: \left(\bar{X}-Z_{1-\alpha/2}\frac{\sigma}{\sqrt{n}} \le \mu \le \bar{X}+Z
 
 $$ \epsilon: |\bar{X}-\mu| \le \frac{Z_{1-\alpha/2} \cdot \sigma}{\sqrt{n}} $$
 
-### Caso 2
+**Caso 2:**
 
 Emplearemos $T$ cuando: $n < 30$ y &sigma;² **DESCONOCIDA**
 
@@ -161,14 +161,53 @@ $$ \epsilon: |\bar{X}-\mu| \le \frac{T_{1-\alpha/2, gl} \cdot S}{\sqrt{n}} $$
 
 $$ gl = n-1 $$
 
-### Caso 3
+**Caso 3:**
 
 Emplearemos $Z$ cuando: $n \ge 30$ y &sigma;² **DESCONOCIDA**
 
 $$ IC: \left(\bar{X}-Z_{1-\alpha/2}\frac{S}{\sqrt{n}} \le \mu \le \bar{X}+Z_{1-\alpha/2}\frac{S}{\sqrt{n}}\right) $$
 
-### Caso 4
+**Caso 4:**
 
 Emplearemos $Z$ cuando: $n < 30$ y &sigma;² **CONOCIDA**
 
 $$ IC: \left(\bar{X}-Z_{1-\alpha/2}\frac{\sigma}{\sqrt{n}} \le \mu \le \bar{X}+Z_{1-\alpha/2}\frac{\sigma}{\sqrt{n}}\right) $$
+
+## Intervalo de confianza para LA DIFERENCIA DE MEDIAS MUESTRALES  con VARIANZA POBLACIONAL CONOCIDA
+
+Si $\bar{X}_1-\bar{X}_2$ son las medias de dos muestras aleatorias independientes de tamaño $n_1-n_2$, tomadas de poblaciones que tienen varianzas conocidas $\sigma_1^2, \sigma_2^2$, respectivamente, entonces el intervalo de confianza para $\mu_1-\mu_2$ es:
+
+$$ IC: \left((\bar{X}_1-\bar{X}_2)-Z_{1-\alpha/2}\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}} \le \mu_1-\mu_2 \le \bar{X}_1-\bar{X}_2+Z_{1-\alpha/2}\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}\right) $$
+
+- Equivalente a:
+
+$$ IC_{\mu_1-\mu_2} = \left[\bar{X}_1-\bar{X}_2 \pm Z_{1-\alpha/2} \cdot \sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}} \right] $$
+
+### Usamos Z (distribución normal estándar) cuando
+
+1. Son muestras grandes $(n_1\ge30, n_2\ge30)$ VARIANZAS POBLACIONALES CONOCIDAS: $\sigma_1^2, \sigma_2^2$.Poblaciones normales o no.
+2. Muestras pequeñas $(n_1<30, n_2<30)$ VARIANZAS POBLACIONALES CONOCIDAS: $\sigma_1^2, \sigma_2^2$. *Poblaciones normales*.
+
+### Interpretaciones adicionales según los intervalos de confianza obtenidos
+
+Si $IC=(+,+), P(+<\mu_1-\mu_2<+)=1-\alpha \rightarrow \mu_A > \mu_B$
+
+Si $IC=(-,-), P(-<\mu_1-\mu_2<-)=1-\alpha \rightarrow \mu_A < \mu_B$
+
+Si $IC=(-,+), P(-<\mu_1-\mu_2<+)=1-\alpha \rightarrow \mu_A = \mu_B$ (Las medias de $\mu_1 - \mu_2$ son iguales)
+
+## Intervalo de confianza para la DIFERENCIA DE MEDIAS MUESTRALES con VARIANZA POBLACIONAL DESCONOCIDA
+
+Varianza desconocida
+
+- Muestras pequeñas $(n_1<30, n_2<30)$
+- Varianzas poblacionales desconocidas e iguales: ($\sigma_1^2 = \sigma_2^2$).
+- *Poblaciones normales*.
+
+**Caso 1:**
+
+$$ IC: \left((\bar{X}_1-\bar{X}_2)-T_{1-\alpha/2, gl}\sqrt{S_p^2 \cdot \frac{1}{n_1}+\frac{1}{n_2}} \le \mu_1-\mu_2 \le (\bar{X}_1-\bar{X}_2)+T_{1-\alpha/2, gl}\sqrt{S_p^2 \cdot\frac{1}{n_1}+\frac{1}{n_2}}\right) $$
+
+Cuya distribución es la de **t de Student** con $gl = n_1 + n_2 - 2$.
+
+$$ S_p^2 = \frac{(n_1-1) \cdot S_1^2 + (n_2-1) \cdot S_2^2}{n_1+n_2-2} $$
