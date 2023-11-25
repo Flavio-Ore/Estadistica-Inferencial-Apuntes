@@ -304,7 +304,7 @@ $$ 12.05 \le \mu_1-\mu_2 \le 14.15 $$
 
 Con el 95% de confianza, la diferencia de las medias de resistencia a la tensión para las clases de largueros (1 y 2) está comprendido desde 12.05 kg/mm² hasta 14.15 kg/mm².
 
-## EJERCICIO 4: Intervalo de confianza para la DIFERENCIA DE MEDIAS MUESTRALES con VARIANZA POBLACIONAL DESCONOCIDA
+## EJERCICIO 4: Intervalo de confianza para la DIFERENCIA DE MEDIAS MUESTRALES con VARIANZAS POBLACIONALES DESCONOCIDAS PERO IGUALES
 
 **PROBLEMA 1:**
 
@@ -334,8 +334,29 @@ En un proceso químico, se comparan dos catalizadores para verificar su efecto e
 
 - Sabemos que $\sigma_1^2 = \sigma_2^2$
 
-- Teniendo la fórmula: Para el intervalo de confianza
--
+- Teniendo la fórmula: Para el intervalo de confianza para esta situación
+
+$$ IC: \left((\bar{X}_1-\bar{X}_2)-T_{1-\alpha/2, gl}\sqrt{S_p^2 \cdot \frac{1}{n_1}+\frac{1}{n_2}} \le \mu_1-\mu_2 \le (\bar{X}_1-\bar{X}_2)+T_{1-\alpha/2, gl}\sqrt{S_p^2 \cdot\frac{1}{n_1}+\frac{1}{n_2}}\right) $$
+
+- Hallamos primero el valor de T-Student
+
+$$ T_{1-\alpha/2, gl}$$
+
+- Donde el grado de libertad es: $gl = n_1 + n_2 - 2$
+
+$$ T_{1-\alpha/2, n_1+n_2-2} $$
+
+$$ T_{1-0.10/2, 12+10-2} $$
+
+$$ T_{1-0.05, 20} $$
+
+$$ T_{0.95, 20} $$
+
+- Usando tabla T
+
+$$ T_{1-\alpha/2, gl} = 1.7291 $$
+
+- Una vez tenemos el valor de T-Student, sigue hallar el valor de $S_p^2$ con la siguiente fórmula:
 
 $$ S_p^2 = \frac{(n_1-1) \cdot S_1^2 + (n_2-1) \cdot S_2^2}{n_1+n_2-2} $$
 
@@ -344,3 +365,238 @@ $$ S_p^2 = \frac{(n_1-1) \cdot S_1^2 + (n_2-1) \cdot S_2^2}{n_1+n_2-2} $$
 $$ S_p^2 = \frac{(12-1) \cdot 4^2 + (10-1) \cdot 5^2}{12+10-2} $$
 
 $$ S_p^2 = \frac{11 \cdot 16 + 9 \cdot 25}{20} $$
+
+$$ S_p^2 = \frac{176 + 225}{20} $$
+
+$$ S_p^2 = \frac{401}{20} $$
+
+$$ S_p^2 = 20.05 $$
+
+- Reemplazando en la fórmula de IC:
+
+$$ IC: \left((85-81)-1.725\sqrt{20.05 \cdot \frac{1}{12}+\frac{1}{10}} \le \mu_1-\mu_2 \le (85-81)+1.725\sqrt{20.05 \cdot\frac{1}{12}+\frac{1}{10}}\right) $$
+
+$$ IC: \left(4-1.725\sqrt{1.67} \le \mu_1-\mu_2 \le 4+1.725\sqrt{1.67}\right) $$
+
+$$ IC: \left(0.69 \le \mu_1-\mu_2 \le 7.31\right) $$
+
+**Respuesta:**
+
+Con un nivel de confianza del 90%, la diferencia entre las medias poblacionales de los catalizadores 1 y 2 está comprendido desde 0.69 hasta 7.31.
+
+$$ IC=(+, +), P(+<μ1−μ2<+) = 1−α→μ1>μ2 $$
+
+**Nota:** tienen un redimiento diferente.
+
+## EJERCICIO 5: Intervalo de confianza para la DIFERENCIA DE MEDIAS MUESTRALES con VARIANZAS POBLACIONALES DESCONOCIDAS PERO DIFERENTES
+
+Se registraron los siguientes datos en días, que representan los tiempos de recuperació de pacientes tratados aleatoriamente con dos medicamentos para aliviarlos de grave infecciones en la vesícula:
+
+**Medicamento 1:**
+
+- $n_1 = 14$
+- $\bar{X}_1 = 17$
+- $S_1^2 = 1.5$
+
+**Medicamento 2:**
+
+- $n_2 = 14$
+- $\bar{X}_2 = 19$
+- $S_2^2 = 1.8$
+
+Encuentre un intervalo de confianza del 99% para la diferencia $\mu_1-\mu_2$ en el tiempo promedio de recuperación para los medicamentos, suponiendo poblaciones normales con *varianzas diferentes*.
+
+**Datos del problema:**
+
+**Población:**
+
+- Medicamento 1: $\sigma_1$ = ? (DESCONOCIDO)
+- Medicamento 2: $\sigma_2$ = ? (DESCONOCIDO)
+
+**Muestra:**
+
+- Medicamento 1: $n_1 = 14$, $\bar{X}_1 = 17$, $S_1^2 = 1.5$
+- Medicamento 2: $n_2 = 14$, $\bar{X}_2 = 19$, $S_2^2 = 1.8$
+
+**Confianza:**
+
+- $1 - \alpha = 0.99$
+- $\alpha = 0.01$
+
+**SOLUCIÓN:**
+
+- $\sigma_1^2 \neq \sigma_2^2$
+- Teniendo la fórmula del IC para varianzas diferentes y desconocidas:
+
+$$ IC: \left((\bar{X}_1-\bar{X}_2)-T_{1-\alpha/2, v}\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}} \le \mu_1-\mu_2 \le (\bar{X}_1-\bar{X}_2)+T_{1-\alpha/2, v}\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}}\right) $$
+
+- Hallamos primero el valor de T-Student
+
+$$ T_{1-\alpha/2, v}$$
+
+- Donde el grado de libertad es:
+
+$$ v= \frac{\left(\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}\right)^2}{\frac{1}{n_1-1}\left(\frac{S_1^2}{n_1}\right)^2+\frac{1}{n_2-1}\left(\frac{S_2^2}{n_2}\right)^2} $$
+
+- Reemplazando:
+
+$$ v= \frac{\left(\frac{1.5}{14}+\frac{1.8}{14}\right)^2}{\frac{1}{14-1}\left(\frac{1.5}{14}\right)^2+\frac{1}{14-1}\left(\frac{1.8}{14}\right)^2} $$
+
+$$ v=25.787 \cong 26 $$
+
+- Tabla T
+
+$$ T_{1-\alpha/2, v} = T_{0.995, 26} = 2.779 $$
+
+- Ahora reemplazando en la fórmula de IC:
+
+$$ IC: \left((17-19)-2.779\sqrt{\frac{1.5}{14}+\frac{1.8}{14}} \le \mu_1-\mu_2 \le (17-19)+2.779\sqrt{\frac{1.5}{14}+\frac{1.8}{14}}\right) $$
+
+$$ 2-1.349 \le \mu_1-\mu_2 \le 2+1.015 $$
+
+$$ 0.651 \le \mu_1-\mu_2 \le 3.349 $$
+
+**Respuesta:**
+
+Con nivel de confianza del 99% la verdadera diferencia del tiempo medio de recuperación para los medicamentos esta comprendido de 0.651 a 3.349
+
+## EJERCICIO 6: Intervalo de confianza para la PROPORCIÓN
+
+**PROBLEMA 1:**
+
+Los compradores de última hora se quejan de que las tiendas por departamento de LIMA cierran muy temprano. En una muestra aleatoria de 600 compradores compulsivos de un centro comercial se encontró que 360 están a favor de un horario más amplio para las compras.
+
+Calcule e interprete un intervalo del 95% de confianza para la proporción verdadera de compradores que están a favor de un horario más amplio para las compras.
+
+**Datos del problema:**
+
+**Población:**
+
+- ¿?
+
+**Muestra:**
+
+- $n = 600$
+- $X = 360$
+- Proporción muestral: $\hat{p} = \frac{X}{n} = \frac{360}{600} = 0.6$
+- $q=0,4$
+
+**Nivel de Confianza:**
+
+- $1 - \alpha = 0.95$
+- $\alpha = 0.05$
+
+Tabla: $Z_{1-0.05/2}=Z_{0.975}=1.96$
+
+**SOLUCIÓN:**
+
+- $X$: Compradores que están a favor de un horario más amplio para las compras.
+- Teniendo la siguiente fórmula:
+
+$$ p-Z_{1-\alpha/2}\sqrt{\frac{pq}{n}} \le \pi \le p+Z_{1-\alpha/2}\sqrt{\frac{pq}{n}} $$
+
+- Reemplazando:
+
+$$ 0.6-1.96\sqrt{\frac{0.6 \cdot 0.4}{600}} \le \pi \le 0.6+1.96\sqrt{\frac{0.6 \cdot 0.4}{600}} $$
+
+$$ IC(\pi)=0,6 \plusmn 1,96 \cdot \sqrt{\frac{0.6 \cdot 0.4}{600}} $$
+
+$$ 0,561 \le \pi \le 0,639 $$
+
+**Respuesta:**
+
+Con un 95% de confianza la verdadera proporción (porcentaje) de compradores que están a favor de un horario más amplio para las compras en el centro comercial, se encuentra entre 0.561 y 0.639 (56.1% y 63.9%).
+
+## EJERCICIO 7: Intervalo de confianza para la DIFFERENCIA DE PROPORCIONES
+
+Los compradores de ultima hora de los centros comerciales se quejan de que las tiendas por departamento de LIMA cierran muy temprano. En una muestra aleatoria de 600 compradores compulsivos del Centro Comercial La Rambla y del Centro Comercial Jockey Plaza se encontró que 360 están a favor de un horario más amplio para las compras y del Centro Comercial Jockey Plaza encontró que 240 están a favor de un horario mas amplio de compra.
+
+Calcule e interprete un intervalo del 95% de confianzal para la diferencia de proporciones verdadera de compradores de los 2 centros comerciales que están a favor de un horario más amplio para las compras.
+
+**Datos del problema:**
+
+**Población:**
+
+- ¿?
+
+**Muestra:**
+
+- $n_1 = 600$
+- $X_1 = 360$
+- $P_1 = \frac{X_1}{n_1} = \frac{360}{600} = 0.6$
+- $P_2 = \frac{X_2}{n_2} = \frac{240}{600} = 0.4$
+
+**Nivel de Confianza:**
+
+- $1 - \alpha = 0.95$
+- $\alpha = 0.05$
+- Tabla: $Z_{1-0.05/2}=Z_{0.975}=1.96$
+
+**SOLUCIÓN:**
+
+- $X1$: Clientes a favor de amplio horario de CC La Rambla
+- $X2$: Clientes a favor de amplio horario de CC Jockey Plaza
+
+- Teniendo la siguiente fórmula:
+
+$$ IC(p_1-p_2)=\left(p_1-p_2-Z_{1-\alpha/2}\sqrt{\frac{p_1q_1}{n_1}+\frac{p_2q_2}{n_2}} \le \pi \le p_1-p_2+Z_{1-\alpha/2}\sqrt{\frac{p_1q_1}{n_1}+\frac{p_2q_2}{n_2}}\right) $$
+
+- Reemaplazamos usando la siguiente reducción:
+
+$$ IC(\pi) = 0,6-0,4 \pm 1,96 \cdot \sqrt{\frac{0,6 \cdot 0,4}{600}+\frac{0,4 \cdot 0,6}{600}} $$
+
+$$ IC(\pi) = (0,14; 0,25) $$
+
+$$ 0,14  \le \pi \le 0,25 $$
+
+**Respuesta:**
+
+Con un 95% de confianza la verdadera proporción (porcentaje) de compradores que están a favor de un horario más amplio para las compras en el centro comercial, se encuentra entre 0.14 y 0.25 (14.4% y 25.5%).
+
+## EJERCICIO 8: Intervalo de confianza Chi-Cuadrado
+
+**PROBLEMA 1:**
+
+Los siguientes datos representan las edades que tenían al momento de morir por enfermedad de una muestra de 20 personas de un pueblo:
+
+`80, 87, 90, 61, 85, 73, 82, 84, 75, 85, 58, 70, 70, 78, 84, 95, 87, 77, 81, 52`
+
+Hallar un intervalo de confianza del 95% para la varianza poblacional de la edad de merte.
+
+**Datos del problema:**
+
+**Población:**
+
+- ¿?
+
+**Muestra:**
+
+- $n = 20$
+- $S = 11.0506$
+
+**Nivel de Confianza:**
+
+- $1 - \alpha = 0.95$
+- $\alpha = 0.05$
+
+**SOLUCIÓN:**
+
+- Teniendo la siguiente fórmula
+
+$$ \frac{(n-1)S^2}{\chi_{1-\alpha/2, n-1}^2} \le \sigma^2 \le \frac{(n-1)S^2}{\chi_{\alpha/2, n-1}^2} $$
+
+- Usando la tabla Chi-Cuadrado
+
+$$ \chi_{1-\alpha/2, n-1}^2 = \chi_{0.975, 19}^2 = 32.8523 $$
+
+$$ \chi_{\alpha/2, n-1}^2 = \chi_{0.025, 19}^2 = 8.9065 $$
+
+- Reemplazando
+
+$$ \frac{(20-1)11.0506^2}{32.8523} \le \sigma^2 \le \frac{(20-1)11.0506^2}{8.9065} $$
+
+$$ 71.258 \le \sigma^2 \le 262.8406 $$
+
+**Respuesta:**
+
+Hay un 95% de confianza de que la varianza de las edades de todas las personas que mueren por enfermedad en el pueblo cae entre 71,258 y 262,8406

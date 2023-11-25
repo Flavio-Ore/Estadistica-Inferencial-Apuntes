@@ -196,7 +196,7 @@ Si $IC=(-,-), P(-<\mu_1-\mu_2<-)=1-\alpha \rightarrow \mu_A < \mu_B$
 
 Si $IC=(-,+), P(-<\mu_1-\mu_2<+)=1-\alpha \rightarrow \mu_A = \mu_B$ (Las medias de $\mu_1 - \mu_2$ son iguales)
 
-## Intervalo de confianza para la DIFERENCIA DE MEDIAS MUESTRALES con VARIANZA POBLACIONAL DESCONOCIDA
+## Intervalo de confianza para la DIFERENCIA DE MEDIAS MUESTRALES con VARIANZAS POBLACIONALES DESCONOCIDAS PERO IGUALES
 
 Varianza desconocida
 
@@ -211,3 +211,85 @@ $$ IC: \left((\bar{X}_1-\bar{X}_2)-T_{1-\alpha/2, gl}\sqrt{S_p^2 \cdot \frac{1}{
 Cuya distribución es la de **t de Student** con $gl = n_1 + n_2 - 2$.
 
 $$ S_p^2 = \frac{(n_1-1) \cdot S_1^2 + (n_2-1) \cdot S_2^2}{n_1+n_2-2} $$
+
+## Intervalo de confianza para la DIFERENCIA DE MEDIAS MUESTRALES con VARIANZAS POBLACIONALES DESCONOCIDAS PERO DIFERENTES
+
+Varianza desconocida
+
+- Muestras pequeñas $(n_1<30, n_2<30)$
+- Varianzas poblacionales desconocidas pero diferentes: ($\sigma_1^2 \neq \sigma_2^2$).
+- *Poblaciones normales*.
+
+$$ (\bar{X}_1-\bar{X}_2)-T_{1-\alpha/2, v}\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}} \le \mu_1-\mu_2 \le (\bar{X}_1-\bar{X}_2)+T_{1-\alpha/2, v}\sqrt{\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}} $$
+
+- Donde la distribución de $T$ es la de **t de Student** con $v$ grados de libertad.
+
+$$ T_{1-\alpha/2, v} $$
+
+$$ v= \frac{\left(\frac{S_1^2}{n_1}+\frac{S_2^2}{n_2}\right)^2}{\frac{1}{n_1-1}\left(\frac{S_1^2}{n_1}\right)^2+\frac{1}{n_2-1}\left(\frac{S_2^2}{n_2}\right)^2} $$
+
+## Intervalo de confianza para la PROPORCIÓN
+
+$$ IC(\pi)=p-Z_{1-\alpha/2}\sqrt{\frac{pq}{n}} \le \pi \le p+Z_{1-\alpha/2}\sqrt{\frac{pq}{n}} $$
+
+$$ P=\frac{X}{n} = \frac{\text{Número de éxitos en la muestra o población}}{\text{Tamaño de la muestra o población}} $$
+
+**Valores tabla Z aproximados:**
+
+| Nivel de confianza: $1-\alpha$ | $Z_{1-\alpha/2}$  |
+| ------------------------------ | ----------------- |
+| 90%                            | $Z_{0,95}=1.645$  |
+| 95%                            | $Z_{0,975}=1.96$  |
+| 98%                            | $Z_{0,99}=2.33$   |
+| 99%                            | $Z_{0,995}=2.575$ |
+
+**Nivel de confianza:** 1-A=99% 98%, 95%, 90%, ...
+
+**Nivel de significación:** A=1%, 2%, 5%, 10%, ...
+
+## Intervalo de confianza para la DIFERENCIA DE PROPORCIONES
+
+$$ p_1-p_2-Z_{1-a/2}\cdot \sqrt{\frac{p_1q_1}{n_1}+\frac{p_2q_2}{n_2}} < \pi_1-\pi_2 < p_1-p_2+Z_{1-a/2}\cdot \sqrt{\frac{p_1q_1}{n_1}+\frac{p_2q_2}{n_2}} $$
+
+$$ P_1=\frac{X}{n} = \frac{\text{Número de éxitos en la muestra o población 1}}{\text{Tamaño de la muestra o población}} $$
+
+$$ P_2=\frac{X}{n} = \frac{\text{Número de éxitos en la muestra o población 2}}{\text{Tamaño de la muestra o población}} $$
+
+**Valores tabla Z aproximados:**
+
+| Nivel de confianza: $1-\alpha$ | $Z_{1-\alpha/2}$  |
+| ------------------------------ | ----------------- |
+| 90%                            | $Z_{0,95}=1.645$  |
+| 95%                            | $Z_{0,975}=1.96$  |
+| 98%                            | $Z_{0,99}=2.33$   |
+| 99%                            | $Z_{0,995}=2.575$ |
+
+**Nivel de confianza:** 1-A=99% 98%, 95%, 90%, ...
+
+**Nivel de significación:** A=1%, 2%, 5%, 10%, ...
+
+## Intervalo de confianza: Distribución Ji-cuadrado
+
+![Distribucion Ji cuadrado](/apuntes-estadistica-inferencial/estimacion/graf_chi.png)
+
+- Para hacer inferencias acerca de la vairanza poblacional. Es decir, para calcular Intervalos de confianza y Prueba de hipótesis para la varianza poblacional.
+- Para hacer pruebas de Bondad de Ajuste. O sea, para probar si un conjunto de datos sigue una distribución pre-determinada.
+- Para hacer análisis de tablas de contingencia. Es decir, para probar si dos variables categóricas son independientes entre sí.
+
+**Relación entre variabilidad y calidad:**
+
+La calidad de un producto depende mucho de la variabilidad. Se establecen límites de variabilidad, esto para evitar deformas, defectos o diferencias entre un producto y otro. Por lo que podríamos concluir que:
+
+"A menor variabilidad tendremos una mejor calidad en el producto o servicio ofrecido"
+
+**Uso de chi-cuadrado:**
+
+![Uso de chi cuadrado](/apuntes-estadistica-inferencial/estimacion/uso-de-chi-cuadrado.png)
+
+### Intervalo de confianza para la VARIANZA
+
+$$ (n-1)\frac{S^2}{\chi_{1-\alpha/2, n-1}^2} \le \sigma^2 \le (n-1)\frac{S^2}{\chi_{\alpha/2, n-1}^2} $$
+
+### Intervalo de confianza para la DESVIACIÓN ESTÁNDAR
+
+$$ \sqrt{(n-1)\frac{S^2}{\chi_{1-\alpha/2, n-1}^2}} \le \sigma \le \sqrt{(n-1)\frac{S^2}{\chi_{\alpha/2, n-1}^2}} $$
