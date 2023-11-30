@@ -6,7 +6,12 @@ Inferir parámetros estadísticos de la población, a partir de los estadístico
 
 ### Proporción
 
-Es la relación entre el número de elementos que poseen una característica determinada y el número total de elementos de la población.
+Es la relación entre el número de elementos que poseen una característica
+determinada y el número total de elementos de la población.
+
+- Se rige por la siguiente fórmula:
+
+$$ \pi = \frac{\text{Nº de elementos que poseen la característica}}{\text{Nº total de elementos de la población}} $$
 
 ### Campana de Gauss
 
